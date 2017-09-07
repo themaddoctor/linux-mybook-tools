@@ -22,8 +22,10 @@ If you follow the tutorial, but are still unable to open your drive, first check
 users make are typographical errors. If you believe that you made no such mistakes, and need further assistance, submit
 a dump of the first 2MB of the drive, the keyblock (if found), and the password (if used).
 
-Windows is not supported. Try this: https://github.com/andlabs/reallymine
+Windows is not supported.
 
 Mac is supported only to the extent that some scripts and commands in the tutorial can be used in the Mac Terminal app,
 but mounting is not possible. Decryption is possible with a C program if you have Xcode for compiling and sufficient
 room for disk images.
+
+Try ReallyMine for decrypting disk images on Mac, Windows, and linux. https://github.com/andlabs/reallymine
