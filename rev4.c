@@ -9,11 +9,7 @@
  */
 
 #include <linux/module.h>
-#include <linux/init.h>
-#include <linux/types.h>
-#include <linux/errno.h>
 #include <linux/crypto.h>
-#include <asm/byteorder.h>
 
 int rev4_setkey(struct crypto_tfm *tfm, const u8 *in_key, unsigned int key_len)
 {
