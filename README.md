@@ -8,4 +8,4 @@ These tools are only useful for external drives with one of these chips on the U
     OXUF943SE
 
 If you would like to help in development in a simple way, please submit your keyblock (and password, if any).
-Keyblocks can be uploaded as zipped binary files or pasted the output of "hexdump -C" into a comment.
+Keyblocks can be uploaded as zipped binary files or by pasting the output of &quot;hexdump -C&quot; into a comment.
