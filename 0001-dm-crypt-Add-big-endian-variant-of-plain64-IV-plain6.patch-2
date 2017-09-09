@@ -1,0 +1,72 @@
+From f25c720ab02f84461ac8020c0d0c72db196ef281 Mon Sep 17 00:00:00 2001
+From: Milan Broz <gmazyland@gmail.com>
+Date: Sun, 7 May 2017 21:06:11 +0200
+Subject: [PATCH] dm-crypt: Add big-endian variant of plain64 IV (plain64be).
+
+Signed-off-by: Milan Broz <gmazyland@gmail.com>
+---
+ drivers/md/dm-crypt.c | 20 +++++++++++++++++++-
+ 1 file changed, 19 insertions(+), 1 deletion(-)
+
+diff --git a/drivers/md/dm-crypt.c b/drivers/md/dm-crypt.c
+index ebf9e72d479b..d0a0d1bcb42b 100644
+--- a/drivers/md/dm-crypt.c
++++ b/drivers/md/dm-crypt.c
+@@ -246,6 +246,9 @@ static struct crypto_aead *any_tfm_aead(struct crypt_config *cc)
+  * plain64: the initial vector is the 64-bit little-endian version of the sector
+  *        number, padded with zeros if necessary.
+  *
++ * plain64be: the initial vector is the 64-bit big-endian version of the sector
++ *        number, padded with zeros if necessary.
++ *
+  * essiv: "encrypted sector|salt initial vector", the sector number is
+  *        encrypted with the bulk cipher using a salt as key. The salt
+  *        should be derived from the bulk cipher's key via hashing.
+@@ -302,6 +305,15 @@ static int crypt_iv_plain64_gen(struct crypt_config *cc, u8 *iv,
+ 	return 0;
+ }
+ 
++static int crypt_iv_plain64be_gen(struct crypt_config *cc, u8 *iv,
++				  struct dm_crypt_request *dmreq)
++{
++	memset(iv, 0, cc->iv_size);
++	*(__be64 *)&iv[cc->iv_size - sizeof(u64)] = cpu_to_be64(dmreq->iv_sector);
++
++	return 0;
++}
++
+ /* Initialise ESSIV - compute salt but no local memory allocations */
+ static int crypt_iv_essiv_init(struct crypt_config *cc)
+ {
+@@ -835,6 +847,10 @@ static const struct crypt_iv_operations crypt_iv_plain64_ops = {
+ 	.generator = crypt_iv_plain64_gen
+ };
+ 
++static const struct crypt_iv_operations crypt_iv_plain64be_ops = {
++	.generator = crypt_iv_plain64be_gen
++};
++
+ static const struct crypt_iv_operations crypt_iv_essiv_ops = {
+ 	.ctr       = crypt_iv_essiv_ctr,
+ 	.dtr       = crypt_iv_essiv_dtr,
+@@ -2208,6 +2224,8 @@ static int crypt_ctr_ivmode(struct dm_target *ti, const char *ivmode)
+ 		cc->iv_gen_ops = &crypt_iv_plain_ops;
+ 	else if (strcmp(ivmode, "plain64") == 0)
+ 		cc->iv_gen_ops = &crypt_iv_plain64_ops;
++	else if (strcmp(ivmode, "plain64be") == 0)
++		cc->iv_gen_ops = &crypt_iv_plain64be_ops;
+ 	else if (strcmp(ivmode, "essiv") == 0)
+ 		cc->iv_gen_ops = &crypt_iv_essiv_ops;
+ 	else if (strcmp(ivmode, "benbi") == 0)
+@@ -2986,7 +3004,7 @@ static void crypt_io_hints(struct dm_target *ti, struct queue_limits *limits)
+ 
+ static struct target_type crypt_target = {
+ 	.name   = "crypt",
+-	.version = {1, 17, 0},
++	.version = {1, 17, 1},
+ 	.module = THIS_MODULE,
+ 	.ctr    = crypt_ctr,
+ 	.dtr    = crypt_dtr,
+-- 
+2.11.0
+
