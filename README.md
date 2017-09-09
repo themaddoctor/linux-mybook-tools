@@ -1,11 +1,14 @@
 # linux-mybook-tools
-tools for decrypting some WD My Book drives in linux
+tools for opening some encrypted WD My Book drives in linux
 
 These tools are only useful for external drives with one of these chips on the USB-SATA bridge card:
     JMS538S,
     SW6316,
     INIC1607E,
-    OXUF943SE
+    OXUF943SE.
+These tools are specifically for mounting encrypted drives. This allows the drive to be used in linux, for example
+to recover the files on it, but does not decrypt the disk for use on Windows. If you prefer to make a decrypted disk
+image, see the ReallyMine project (link below).
 
 If you would like to help in development in a simple way, please submit your keyblock (and password, if any).
 Keyblocks can be uploaded as zipped binary files or by pasting the output of &quot;hexdump -C&quot; into a comment.
@@ -28,4 +31,4 @@ Mac is supported only to the extent that some scripts and commands in the tutori
 but mounting is not possible. Decryption is possible with a C program if you have Xcode for compiling and sufficient
 room for disk images.
 
-Try ReallyMine for decrypting disk images on Mac, Windows, and linux. https://github.com/andlabs/reallymine
+Try ReallyMine for creating decrypted disk images on Mac, Windows, and linux. https://github.com/andlabs/reallymine
