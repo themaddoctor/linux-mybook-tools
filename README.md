@@ -23,7 +23,7 @@ Please do not contact me about password recovery unless you can show proof of ow
 
 If you follow the tutorial, but are still unable to open your drive, first check that you made no typos. Most mistakes
 users make are typographical errors. If you believe that you made no such mistakes, and need further assistance, submit
-a dump of the first 2MB of the drive, the keyblock (if found), and the password (if used).
+a dump of the first 2MB of the drive, the keyblock (if found), and the password (if used). DO NOT send screenshots or videos.
 
 Windows is not supported.
 
