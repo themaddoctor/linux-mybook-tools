@@ -32,3 +32,4 @@ but mounting is not possible. Decryption is possible with a C program if you hav
 room for disk images.
 
 Try ReallyMine for creating decrypted disk images on Mac, Windows, and linux. https://github.com/andlabs/reallymine
+ReallyMine is not my project. It has its own forum, if you need to ask about it.
