@@ -1,5 +1,6 @@
 #!/bin/bash
-# usage: bash jms538s-extract-DEK-from-keyblock.sh <kek file (hex)> <keyblock file (binary)>
+# usage: bash sw6316-extract-DEK-from-keyblock.sh <kek file (hex)> <keyblock file (binary)>
+# requires python2 and pycrypto
 
 KEK="$1"
 KEYBLOCK="$2"
