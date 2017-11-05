@@ -1,5 +1,5 @@
 #!/bin/bash
-# usage: bash jms538s-extract-DEK-from-keyblock.sh <kek file (hex)> <keyblock file (binary)>
+# usage: bash oxuf943se-extract-DEK-from-keyblock.sh <kek file (hex)> <keyblock file (binary)>
 
 KEK="$1"
 KEYBLOCK="$2"
