@@ -1,0 +1,9 @@
+FAQ
+
+Does this proceedure permanently decrypt my disk?
+
+    No. It only sets up a filter, so that the linux system can see through the encryption.
+    When you reboot, the filter is gone, and you have to recreate it. Save your dek.hex
+    (and if necessary rev4.ko or rev16.ko). Better yet, backup your files before you
+    turn the computer off.
+
