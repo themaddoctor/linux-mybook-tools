@@ -7,3 +7,12 @@ Does this proceedure permanently decrypt my disk?
     (and if necessary rev4.ko or rev16.ko). Better yet, backup your files before you
     turn the computer off.
 
+Will it work in a virtual machine (VM) running linux?
+
+    I don't know. No one has told me that it has worked for them. You will need to be
+    able to access the WD drive, but some VM software do not allow that.
+
+Will it work if I use a live linux USB?
+
+    It's never guaranteed to work, but a live USB linux system is fine for this.
+
