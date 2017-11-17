@@ -16,3 +16,16 @@ Will it work if I use a live linux USB?
 
     It's never guaranteed to work, but a live USB linux system is fine for this.
 
+I have a PLX OSUF943SSE chip, and I can't find my keyblock. Now what?
+
+    Did you use the find-keyblock.sh script?
+    
+    Maybe it's in the service-area modules. Try HDDSuperTool from
+    
+        http://www.sdcomputingservice.com/hddsupertool/download
+    
+    If you can't find the keyblock in the SA modules, it may be on one of the ROM chips
+    of the USB-SATA bridge card. For that you will need an EEPROM reader.
+    
+    So far, no one has told me that they have found the OSUF943SE keyblock in the SA
+    modules or ROM chips.
