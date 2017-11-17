@@ -18,7 +18,7 @@ Will it work if I use a live linux USB?
 
 I have a PLX OSUF943SSE chip, and I can't find my keyblock. Now what?
 
-    Did you use the find-keyblock.sh script?
+    Did you use the findkeyblock.sh script?
     
     Maybe it's in the service-area modules. Try HDDSuperTool from
     
