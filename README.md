@@ -33,3 +33,6 @@ room for disk images.
 
 Try ReallyMine for creating decrypted disk images on Mac, Windows, and linux. https://github.com/andlabs/reallymine
 ReallyMine is not my project. It has its own forum, if you need to ask about it.
+
+If you find my email online, please be advised that I ignore all messages to that address. The only way to get
+help is through this site. TY
