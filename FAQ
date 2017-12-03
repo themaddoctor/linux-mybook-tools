@@ -30,3 +30,10 @@ I have a PLX OSUF943SSE chip, and I can't find my keyblock. Now what?
     So far, no one has told me that they have successfully found the OSUF943SE keyblock
     in the SA modules or ROM chips. Only one person has told me that they found the keyblock
     at the end of the disk.
+
+When about this error? "dd: /dev/sdd: cannot skip: Invalid argument"
+
+    Did you take the drive out of the WD enclosure and put it in a computer or in a
+    non-WD enclosure?
+
+    Are you using the keyblock location for the correct disk size?
