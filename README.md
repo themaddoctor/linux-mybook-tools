@@ -25,6 +25,9 @@ If you follow the tutorial, but are still unable to open your drive, first check
 users make are typographical errors. If you believe that you made no such mistakes, and need further assistance, submit
 a dump of the first 2MB of the drive, the keyblock (if found), and the password (if used). DO NOT send screenshots or videos.
 
+-EDIT- I don't think I can give personal help any longer. Everything I have to offer is in this project. Take it
+and do as you like with it.
+
 Windows is not supported.
 
 Mac is supported only to the extent that some scripts and commands in the tutorial can be used in the Mac Terminal app,
