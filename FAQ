@@ -9,8 +9,8 @@ Does this proceedure permanently decrypt my disk?
 
 Will it work in a virtual machine (VM) running linux?
 
-    I don't know. No one has told me that it has worked for them. You will need to be
-    able to access the WD drive, but some VM software do not allow that.
+    It can. You will need to be able to access the WD drive, but some VM software do
+    not allow that.
 
 Will it work if I use a live linux USB?
 
