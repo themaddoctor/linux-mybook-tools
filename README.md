@@ -12,8 +12,11 @@ These tools are specifically for mounting encrypted drives. This allows the driv
 to recover the files on it, but does not decrypt the disk for use on Windows. If you prefer to make a decrypted disk
 image, see the ReallyMine project (link below), or use these tools for decryption and dd or ddrescue for imaging.
 
+Copies of the source code for the drivers and a few pre-compiled copies are in the folder "drivers".
+To use a pre-compiled driver, the kernel and linux distribution must match what you have on your system.
+
 If you would like to help in development in a simple way, please submit your keyblock (and password, if any).
-Keyblocks can be uploaded as zipped binary files or by pasting the output of &quot;hexdump -C&quot; into a comment.
+Keyblocks can be uploaded as zipped binary files or by pasting the output of "hexdump -C" into a comment.
 
 Users with MyPassport drives should look at this first:
 http://blog.acelaboratory.com/pc-3000-hdd-how-to-solder-a-sata-adapter-to-the-usb-western-digital-drive.html
