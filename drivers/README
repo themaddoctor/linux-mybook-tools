@@ -1,4 +1,1 @@
 Folder for rev4, rev16, and someday permute drivers/modules
-
-DO NOT USE THE permute MODULE at this point in time. It has a serious bug that causes data corruption when more than
-one disk uses it.
