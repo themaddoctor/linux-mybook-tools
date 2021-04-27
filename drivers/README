@@ -1,1 +1,6 @@
-Folder for rev4, rev16, and someday permute drivers/modules
+This folder is for ther rev4 and rev16 drivers/modules. Source code is in the .c files. Pre-compiled modules
+are the .ko files. To use a pre-compiled module, the linux distribution and kernel version must match those
+on your system.
+
+There are only a few pre-compiled modules here. If you want to help, you can upload your module after you
+have recovered your data. Thanks in advance.
