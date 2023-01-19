@@ -17,10 +17,11 @@ def unwrap(key,data):
     R = []
     for i in range(n):
         R.append(data[(i+1)*8:(i+2)*8])
+    cipher = AES.new(key,1)
     for j in range(5,-1,-1):
         for i in range(n-1,-1,-1):
             X = xor(A,int.to_bytes(n*j+i+1,8,"big"))
-            B = AES.new(key,1).decrypt(X+R[i])
+            B = cipher.decrypt(X+R[i])
             A = B[:8]
             R[i] = B[8:]
     assert (A == IV), f"integrity check failed ({A.hex()} != {IV.hex()})"
