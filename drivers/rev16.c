@@ -9,7 +9,7 @@
  */
 
 #include <linux/module.h>
-#include <linux/crypto.h>
+#include <linux/algapi.h>
 
 int rev16_setkey(struct crypto_tfm *tfm, const u8 *in_key, unsigned int key_len)
 {
