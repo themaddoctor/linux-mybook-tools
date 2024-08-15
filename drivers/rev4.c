@@ -4,6 +4,7 @@
  * very simple cipher to reverse each block of 4 bytes
  *
  * Thomas Kaeding, 20161119
+ * revised 20240815 to update headers for newer kernels
  *
  * ---------------------------------------------------------------------------
  */
